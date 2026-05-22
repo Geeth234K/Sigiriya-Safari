@@ -1,0 +1,250 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 2rem 1.2rem;
+}
+
+.profile-page .profile-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-page .profile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-page .profile-header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: #17212f;
+  margin-bottom: 0.65rem;
+}
+
+.profile-page .message {
+  background: #e8f7ee;
+  color: #0f5d3a;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  display: inline-block;
+  border: 1px solid #bde5cc;
+  font-size: 0.92rem;
+}
+
+.profile-page .profile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.profile-page .profile-section {
+  background: #ffffff;
+  padding: 1.1rem;
+  border-radius: 14px;
+  border: 1px solid #dce3ef;
+  box-shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+}
+
+.profile-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e6edf8;
+}
+
+.profile-page .section-header h2 {
+  font-size: 1.2rem;
+  color: #1f3556;
+  margin: 0;
+}
+
+.profile-page .edit-btn,
+.profile-page .save-btn {
+  background: #0d6d45;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile-page .edit-btn.cancel {
+  background: #b23939;
+}
+
+.profile-page .edit-btn.logout {
+  background: #6b7280;
+}
+
+.profile-page .profile-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.profile-page .info-item {
+  padding: 0.8rem;
+  background: #f7faff;
+  border-radius: 10px;
+  border: 1px solid #dce3ef;
+}
+
+.profile-page .info-item label {
+  display: block;
+  font-weight: 600;
+  color: #5a6780;
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+}
+
+.profile-page .info-item p {
+  font-size: 0.98rem;
+  color: #17212f;
+  margin: 0;
+}
+
+.profile-page .role-badge {
+  display: inline-block;
+  background: #dff6ea;
+  color: #0f5d3a;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.profile-page .edit-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.profile-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.profile-page .form-group label {
+  font-weight: 600;
+  color: #293751;
+  font-size: 0.88rem;
+}
+
+.profile-page .form-group input,
+.profile-page .profile-select {
+  padding: 0.64rem 0.72rem;
+  border: 1px solid #ccd7ea;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  font-family: inherit;
+  background: #fbfdff;
+}
+
+.profile-page .form-group input:focus,
+.profile-page .profile-select:focus {
+  outline: none;
+  border-color: #1f5ea8;
+  box-shadow: 0 0 0 3px rgba(31, 94, 168, 0.14);
+}
+
+.profile-page .save-btn {
+  grid-column: 1 / -1;
+}
+
+.profile-page .edit-btn:disabled,
+.profile-page .save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-page .no-bookings {
+  text-align: center;
+  color: #6a758b;
+  padding: 1rem;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.profile-page .bookings-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.profile-page .booking-card {
+  background: #f7faff;
+  border: 1px solid #dce3ef;
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.profile-page .booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-page .status-badge {
+  padding: 0.22rem 0.58rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.profile-page .status-badge.pending {
+  background: #fff4d8;
+  color: #8f6a16;
+}
+
+.profile-page .status-badge.confirmed {
+  background: #dff6ea;
+  color: #0f5d3a;
+}
+
+.profile-page .status-badge.cancelled {
+  background: #fbe3e3;
+  color: #933535;
+}
+
+.profile-page .booking-dates {
+  color: #5f6b82;
+  font-size: 0.86rem;
+}
+
+.profile-page .booking-details {
+  color: #4f5d75;
+  font-size: 0.86rem;
+}
+
+.profile-page .booking-details p {
+  margin: 0.25rem 0;
+}
+
+.profile-page .profile-section .plan {
+  padding: 0;
+}
+
+.profile-page .profile-section .plan-container {
+  max-width: 100%;
+}
+
+.profile-page .profile-delete-section {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .profile-page .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
