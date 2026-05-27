@@ -1,0 +1,105 @@
+.featured-activity-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 38px rgba(12, 24, 38, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-activity-card-media {
+  min-height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-activity-card-media-overlay {
+  min-height: 190px;
+  background: linear-gradient(150deg, rgba(8, 12, 18, 0.55), rgba(8, 12, 18, 0.15));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.1rem;
+}
+
+.featured-activity-card-media-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.featured-activity-card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+}
+
+.featured-activity-card-media-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.featured-activity-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 20px rgba(12, 24, 38, 0.25);
+}
+
+.featured-activity-card-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.featured-activity-card-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.featured-activity-card-body h3 {
+  margin: 0;
+  color: #18243a;
+  font-size: 1.25rem;
+}
+
+.featured-activity-card-body p {
+  margin: 0;
+  color: #5a667f;
+  line-height: 1.6;
+}
+
+.featured-activity-card-button {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+  background: #1c7c54;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 22px rgba(28, 124, 84, 0.25);
+}
+
+.featured-activity-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 26px rgba(28, 124, 84, 0.3);
+}

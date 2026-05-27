@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { FaCrown, FaMountain, FaPersonHiking, FaTree } from "react-icons/fa6";
+import { FaCrown, FaMountain, FaTree, FaUsers } from "react-icons/fa6";
 import SectionHeading from "./SectionHeading";
 
 const iconMap = {
   heritage: FaCrown,
   height: FaMountain,
-  visitors: FaPersonHiking,
+  visitors: FaUsers,
   parks: FaTree
 };
 

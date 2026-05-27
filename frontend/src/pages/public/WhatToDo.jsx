@@ -3,11 +3,8 @@ import "./whatToDo.css";
 export default function WhatToDo() {
   const activities = [
     { id: 1, title: "Jeep Safari", desc: "Thrilling wildlife safari through scenic trails" },
-    { id: 2, title: "Hiking", desc: "Trek up Sigiriya Rock with stunning views" },
-    { id: 3, title: "Village Tours", desc: "Explore authentic Sri Lankan village life" },
-    { id: 4, title: "Bird Watching", desc: "Spot exotic birds in their natural habitat" },
-    { id: 5, title: "Local Food", desc: "Taste authentic traditional cuisine" },
-    { id: 6, title: "Photography", desc: "Capture breathtaking landscapes and wildlife" }
+    { id: 2, title: "Village Tours", desc: "Explore authentic Sri Lankan village life" },
+    { id: 3, title: "Local Food", desc: "Taste authentic traditional cuisine" }
   ];
 
   return (

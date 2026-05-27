@@ -1,10 +1,9 @@
-import { FaCameraRetro, FaLeaf, FaTree, FaUsers, FaWater, FaWandMagicSparkles } from "react-icons/fa6";
+import { FaLeaf, FaTree, FaUsers, FaWater, FaWandMagicSparkles } from "react-icons/fa6";
 import SectionHeading from "./SectionHeading";
 
 const iconMap = {
   culture: FaWandMagicSparkles,
   wildlife: FaLeaf,
-  photography: FaCameraRetro,
   eco: FaTree,
   family: FaUsers,
   landscape: FaWater

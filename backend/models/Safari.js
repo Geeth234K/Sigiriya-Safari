@@ -2,10 +2,18 @@ import mongoose from "mongoose";
 
 const safariSchema = new mongoose.Schema(
   {
-    title: { type: String, required: true },
-    location: { type: String, required: true },
-    price: { type: Number, required: true },
-    durationHours: { type: Number, required: true }
+    title: { type: String, required: true, trim: true },
+    description: { type: String, required: true },
+    icon: { type: String, default: "" },
+    originalPrice: { type: Number, required: true, min: 0 },
+    discountedPrice: { type: Number, required: true, min: 0 },
+    discountPercent: { type: Number, required: true, min: 0 },
+    duration: { type: String, required: true },
+    groupSize: { type: String, required: true },
+    includes: { type: [String], default: [] },
+    wildlife: { type: [String], default: [] },
+    whatToBring: { type: [String], default: [] },
+    isActive: { type: Boolean, default: true }
   },
   { timestamps: true }
 );

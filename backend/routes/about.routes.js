@@ -45,6 +45,12 @@ const sigiriyaPanoramaImagePath = "/images/about/sigiriya-panorama.png";
 const sigiriyaPanoramaTitle = "Sigiriya Panorama";
 const sigiriyaPanoramaAlt = "Panoramic view from Sigiriya";
 const normalizeText = value => (typeof value === "string" ? value.trim().toLowerCase() : "");
+const removalKeywords = ["photography", "hiking", "cart riding", "cart ride"];
+const shouldRemoveItem = item => {
+  const title = normalizeText(item?.title);
+  const icon = normalizeText(item?.icon);
+  return removalKeywords.some(keyword => title.includes(keyword) || icon === keyword);
+};
 
 const defaultAboutData = {
   slug: "sigiriya-safari",
@@ -196,11 +202,6 @@ const defaultAboutData = {
         title: "Wildlife Adventures",
         description: "Enjoy curated safaris with expert guides in nearby national parks.",
         icon: "wildlife"
-      },
-      {
-        title: "Photography Moments",
-        description: "Capture golden-hour climbs, misty jungles, and rare wildlife sightings.",
-        icon: "photography"
       },
       {
         title: "Eco-Tourism Experiences",
@@ -369,6 +370,17 @@ router.get("/", async (req, res) => {
       if (needsSave) {
         await aboutPage.save();
       }
+    }
+    const currentWhyVisit = aboutPage.whyVisit ?? defaultAboutData.whyVisit;
+    const currentWhyItems = Array.isArray(currentWhyVisit.items) ? currentWhyVisit.items : [];
+    const filteredWhyItems = currentWhyItems.filter(item => !shouldRemoveItem(item));
+    if (filteredWhyItems.length !== currentWhyItems.length || !aboutPage.whyVisit) {
+      aboutPage.whyVisit = {
+        ...defaultAboutData.whyVisit,
+        ...currentWhyVisit,
+        items: filteredWhyItems
+      };
+      await aboutPage.save();
     }
     res.json(aboutPage);
   } catch (error) {

@@ -17,12 +17,28 @@ export const safariAPI = {
   delete: (id) => api.delete(`/safaris/${id}`)
 };
 
+export const activityAPI = {
+  getAll: () => api.get("/activities"),
+  getById: (id) => api.get(`/activities/${id}`),
+  create: (data) => api.post("/activities", data),
+  update: (id, data) => api.put(`/activities/${id}`, data),
+  delete: (id) => api.delete(`/activities/${id}`)
+};
+
 export const roomAPI = {
   getAll: () => api.get("/rooms"),
   getById: (id) => api.get(`/rooms/${id}`),
   create: (data) => api.post("/rooms", data),
   update: (id, data) => api.put(`/rooms/${id}`, data),
   delete: (id) => api.delete(`/rooms/${id}`)
+};
+
+export const mealAPI = {
+  getAll: () => api.get("/meals"),
+  getById: (id) => api.get(`/meals/${id}`),
+  create: (data) => api.post("/meals", data),
+  update: (id, data) => api.put(`/meals/${id}`, data),
+  delete: (id) => api.delete(`/meals/${id}`)
 };
 
 export const bookingAPI = {

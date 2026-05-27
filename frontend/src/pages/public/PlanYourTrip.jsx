@@ -40,7 +40,7 @@ export default function PlanYourTrip() {
       : 0;
 
   return (
-    <section className="plan-your-trip">
+    <section className="plan-your-trip" id="plan-your-trip">
       <div className="trip-layout">
         <div className="trip-intro">
           <p className="trip-kicker">Personalized Itinerary Builder</p>

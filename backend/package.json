@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "node --watch server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed:activities": "node seed/activities.seed.js",
+    "seed:meals": "node seed/meals.seed.js",
+    "seed:safaris": "node seed/safaris.seed.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
