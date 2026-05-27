@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FaMoon, FaSun } from "react-icons/fa6";
 import Auth from "../auth/Auth";
 import "./navbar.css";
 
@@ -8,6 +9,12 @@ export default function Navbar() {
   const [authMode, setAuthMode] = useState("login");
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") return "light";
+    const stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
   const profileMenuRef = useRef(null);
 
   useEffect(() => {
@@ -41,10 +48,19 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const openAuth = (mode) => {
     setAuthMode(mode);
     setShowAuth(true);
     setIsProfileMenuOpen(false);
+  };
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -101,6 +117,17 @@ export default function Navbar() {
               <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
                 Contact Us
               </NavLink>
+            </li>
+            <li className="nav-item">
+              <button
+                type="button"
+                className="theme-toggle"
+                onClick={toggleTheme}
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                {theme === "dark" ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
+                <span>{theme === "dark" ? "Light" : "Dark"}</span>
+              </button>
             </li>
           </ul>
         </div>

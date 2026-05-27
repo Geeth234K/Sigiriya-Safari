@@ -11,7 +11,7 @@
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   margin-bottom: 2rem;
-  color: #17212f;
+  color: var(--text);
 }
 
 .contact-content {
@@ -28,32 +28,32 @@
 }
 
 .info-card {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1.1rem;
   border-radius: 12px;
-  border: 1px solid #dce3ef;
-  box-shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
   text-align: center;
 }
 
 .info-card h3 {
-  color: #1f3556;
+  color: var(--text-strong);
   margin-top: 0;
   font-size: 1rem;
 }
 
 .info-card p {
-  color: #4d5970;
+  color: var(--muted-strong);
   margin: 0;
   line-height: 1.5;
 }
 
 .contact-form {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1.2rem;
   border-radius: 14px;
-  border: 1px solid #dce3ef;
-  box-shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
   grid-column: 2;
 }
 
@@ -65,11 +65,11 @@
 .form-group textarea {
   width: 100%;
   padding: 0.7rem 0.78rem;
-  border: 1px solid #ccd7ea;
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
   font-size: 0.95rem;
   font-family: inherit;
-  background: #fbfdff;
+  background: var(--input-bg);
 }
 
 .form-group input:focus,

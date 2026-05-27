@@ -7,15 +7,115 @@
 @layer base {
   :root {
     --bg: #f5f7fb;
+    --bg-soft: #f6f7fb;
+    --bg-gradient: radial-gradient(circle at top, #e9f3ff 0%, var(--bg) 45%, #edf3f7 100%);
     --surface: #ffffff;
-    --surface-soft: #f0f4ff;
+    --surface-soft: #f7faff;
+    --surface-muted: #f0f4ff;
     --text: #17212f;
+    --text-strong: #1f3556;
     --muted: #5d6b81;
+    --muted-strong: #4d5970;
     --primary: #0d6d45;
     --primary-soft: #dff6ea;
     --accent: #f4b400;
     --border: #dce3ef;
+    --border-strong: #ccd7ea;
     --shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+    --shadow-strong: 0 18px 40px rgba(20, 34, 63, 0.12);
+    --input-bg: #fbfdff;
+    --underline: #34d399;
+    --eyebrow-bg: #dff6ea;
+    --eyebrow-border: #bde5cc;
+    --eyebrow-text: #0f5d3a;
+    --eyebrow-shadow: 0 6px 16px rgba(13, 109, 69, 0.2);
+    --nav-bg: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(246, 249, 255, 0.92));
+    --nav-border: rgba(15, 35, 66, 0.1);
+    --nav-shadow: 0 12px 24px rgba(15, 35, 66, 0.08);
+    --nav-link: #1f3556;
+    --nav-link-hover-text: #0d6d45;
+    --nav-link-hover-bg: rgba(13, 109, 69, 0.12);
+    --nav-link-hover-border: rgba(13, 109, 69, 0.2);
+    --nav-link-active-bg: linear-gradient(135deg, #34d399, #059669);
+    --nav-link-active-text: #042217;
+    --nav-link-active-border: rgba(52, 211, 153, 0.55);
+    --nav-dropdown-bg: #ffffff;
+    --nav-dropdown-border: #dce3ef;
+    --nav-dropdown-text: #17212f;
+    --nav-dropdown-hover-bg: #eef2f9;
+    --nav-toggle-bg: rgba(13, 109, 69, 0.12);
+    --nav-toggle-border: rgba(13, 109, 69, 0.2);
+    --nav-toggle-text: #0d6d45;
+    --nav-toggle-hover-bg: rgba(13, 109, 69, 0.2);
+    --nav-toggle-hover-border: rgba(13, 109, 69, 0.3);
+    --footer-bg: #f3f6fb;
+    --footer-text: #1f3556;
+    --footer-muted: #5d6b81;
+    --footer-border: #dce3ef;
+    --footer-link: #1f3556;
+    --footer-link-hover: #0d6d45;
+    --footer-accent: #0d6d45;
+    --footer-accent-border: rgba(13, 109, 69, 0.34);
+    --footer-social-bg: rgba(13, 109, 69, 0.08);
+    --footer-social-text: #0d6d45;
+    --footer-social-hover-bg: rgba(13, 109, 69, 0.16);
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #050b08;
+    --bg-soft: #0b1510;
+    --bg-gradient: radial-gradient(circle at top, rgba(16, 90, 60, 0.25) 0%, #050b08 55%, #040a07 100%);
+    --surface: #0f1a14;
+    --surface-soft: #111f18;
+    --surface-muted: #13231b;
+    --text: #e6f7f0;
+    --text-strong: #f3fef9;
+    --muted: #bcd8cd;
+    --muted-strong: #c6ddd2;
+    --primary: #34d399;
+    --primary-soft: rgba(52, 211, 153, 0.18);
+    --accent: #f0cb63;
+    --border: rgba(148, 186, 170, 0.3);
+    --border-strong: rgba(148, 186, 170, 0.45);
+    --shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.55);
+    --input-bg: rgba(15, 40, 30, 0.4);
+    --underline: #34d399;
+    --eyebrow-bg: rgba(52, 211, 153, 0.2);
+    --eyebrow-border: rgba(52, 211, 153, 0.35);
+    --eyebrow-text: #dff6ea;
+    --eyebrow-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    --nav-bg: linear-gradient(90deg, rgba(8, 27, 21, 0.74), rgba(13, 30, 22, 0.62));
+    --nav-border: rgba(255, 255, 255, 0.14);
+    --nav-shadow: 0 12px 24px rgba(3, 12, 8, 0.32);
+    --nav-link: #edf3ef;
+    --nav-link-hover-text: #ffffff;
+    --nav-link-hover-bg: rgba(255, 255, 255, 0.12);
+    --nav-link-hover-border: rgba(255, 255, 255, 0.2);
+    --nav-link-active-bg: linear-gradient(135deg, #34d399, #059669);
+    --nav-link-active-text: #042217;
+    --nav-link-active-border: rgba(52, 211, 153, 0.55);
+    --nav-dropdown-bg: #0f1714;
+    --nav-dropdown-border: rgba(255, 255, 255, 0.1);
+    --nav-dropdown-text: #e6f7f0;
+    --nav-dropdown-hover-bg: #16221b;
+    --nav-toggle-bg: rgba(255, 255, 255, 0.12);
+    --nav-toggle-border: rgba(255, 255, 255, 0.2);
+    --nav-toggle-text: #ffffff;
+    --nav-toggle-hover-bg: rgba(255, 255, 255, 0.2);
+    --nav-toggle-hover-border: rgba(255, 255, 255, 0.35);
+    --footer-bg: linear-gradient(180deg, #071a13 0%, #09140f 100%);
+    --footer-text: #e8efe6;
+    --footer-muted: #c8d3ca;
+    --footer-border: rgba(255, 255, 255, 0.1);
+    --footer-link: #d5dfd6;
+    --footer-link-hover: #f0cb63;
+    --footer-accent: #0d6d45;
+    --footer-accent-border: rgba(13, 109, 69, 0.34);
+    --footer-social-bg: rgba(255, 255, 255, 0.08);
+    --footer-social-text: #f8e6b0;
+    --footer-social-hover-bg: rgba(240, 203, 99, 0.18);
   }
 
   *,
@@ -37,7 +137,7 @@
   body {
     margin: 0;
     font-family: "Inter", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: radial-gradient(circle at top, #e9f3ff 0%, var(--bg) 45%, #edf3f7 100%);
+    background: var(--bg-gradient);
     color: var(--text);
   }
 

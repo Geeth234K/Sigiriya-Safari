@@ -11,7 +11,7 @@
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   margin-bottom: 2rem;
-  color: #17212f;
+  color: var(--text);
 }
 
 .activities-grid {
@@ -21,11 +21,11 @@
 }
 
 .activity-card {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1.4rem;
   border-radius: 14px;
-  border: 1px solid #dce3ef;
-  box-shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -35,21 +35,21 @@
 }
 
 .activity-card h3 {
-  color: #0d6d45;
+  color: var(--primary);
   margin-top: 0;
   font-size: 1.15rem;
 }
 
 .activity-card p {
-  color: #4d5970;
+  color: var(--muted-strong);
   line-height: 1.6;
   margin: 0.8rem 0 1rem;
 }
 
 .activity-card button {
-  background: #f0f5ff;
-  color: #1f3556;
-  border: 1px solid #d7e1f2;
+  background: var(--surface-muted);
+  color: var(--text-strong);
+  border: 1px solid var(--border);
   padding: 0.55rem 0.95rem;
   border-radius: 8px;
   cursor: pointer;
@@ -58,5 +58,5 @@
 }
 
 .activity-card button:hover {
-  background: #e6eefc;
+  background: var(--surface-soft);
 }

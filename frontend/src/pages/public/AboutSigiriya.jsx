@@ -38,10 +38,10 @@ export default function AboutSigiriya() {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#050b08] text-white">
-        <div className="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 px-8 py-10 text-center shadow-xl backdrop-blur">
+      <main className="flex min-h-screen items-center justify-center bg-[var(--bg)] text-[var(--text)]">
+        <div className="flex flex-col items-center gap-4 rounded-3xl border border-[var(--border)] bg-[var(--surface)] px-8 py-10 text-center shadow-[var(--shadow)]">
           <div className="h-10 w-10 animate-spin rounded-full border-2 border-emerald-300/40 border-t-emerald-200" />
-          <p className="text-sm text-emerald-100/80">Loading Sigiriya Safari stories...</p>
+          <p className="text-sm text-[var(--muted)]">Loading Sigiriya Safari stories...</p>
         </div>
       </main>
     );
@@ -49,8 +49,8 @@ export default function AboutSigiriya() {
 
   if (error) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#050b08] text-white">
-        <div className="max-w-md rounded-3xl border border-rose-400/30 bg-rose-500/10 px-8 py-10 text-center shadow-xl backdrop-blur">
+      <main className="flex min-h-screen items-center justify-center bg-[var(--bg)] text-[var(--text)]">
+        <div className="max-w-md rounded-3xl border border-rose-400/30 bg-rose-500/10 px-8 py-10 text-center shadow-[var(--shadow)]">
           <p className="text-lg font-semibold text-rose-100">Something went wrong</p>
           <p className="mt-2 text-sm text-rose-100/80">{error}</p>
         </div>
@@ -59,7 +59,7 @@ export default function AboutSigiriya() {
   }
 
   return (
-    <main className="bg-[#050b08] text-white">
+    <main className="bg-[var(--bg)] text-[var(--text)]">
       <HeroSection data={aboutData.hero} />
       <AboutSection data={aboutData.about} />
       <FeatureCards data={aboutData.features} />

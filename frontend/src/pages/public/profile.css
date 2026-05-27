@@ -15,7 +15,7 @@
 
 .profile-page .profile-header h1 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  color: #17212f;
+  color: var(--text);
   margin-bottom: 0.65rem;
 }
 
@@ -36,11 +36,11 @@
 }
 
 .profile-page .profile-section {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1.1rem;
   border-radius: 14px;
-  border: 1px solid #dce3ef;
-  box-shadow: 0 12px 28px rgba(15, 35, 66, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .profile-page .section-header {
@@ -50,12 +50,12 @@
   gap: 0.8rem;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid #e6edf8;
+  border-bottom: 1px solid var(--border);
 }
 
 .profile-page .section-header h2 {
   font-size: 1.2rem;
-  color: #1f3556;
+  color: var(--text-strong);
   margin: 0;
 }
 
@@ -87,22 +87,22 @@
 
 .profile-page .info-item {
   padding: 0.8rem;
-  background: #f7faff;
+  background: var(--surface-soft);
   border-radius: 10px;
-  border: 1px solid #dce3ef;
+  border: 1px solid var(--border);
 }
 
 .profile-page .info-item label {
   display: block;
   font-weight: 600;
-  color: #5a6780;
+  color: var(--muted);
   font-size: 0.82rem;
   margin-bottom: 0.35rem;
 }
 
 .profile-page .info-item p {
   font-size: 0.98rem;
-  color: #17212f;
+  color: var(--text);
   margin: 0;
 }
 
@@ -130,18 +130,18 @@
 
 .profile-page .form-group label {
   font-weight: 600;
-  color: #293751;
+  color: var(--text-strong);
   font-size: 0.88rem;
 }
 
 .profile-page .form-group input,
 .profile-page .profile-select {
   padding: 0.64rem 0.72rem;
-  border: 1px solid #ccd7ea;
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
   font-size: 0.93rem;
   font-family: inherit;
-  background: #fbfdff;
+  background: var(--input-bg);
 }
 
 .profile-page .form-group input:focus,
@@ -163,7 +163,7 @@
 
 .profile-page .no-bookings {
   text-align: center;
-  color: #6a758b;
+  color: var(--muted);
   padding: 1rem;
   margin: 0;
   font-size: 0.95rem;
@@ -175,8 +175,8 @@
 }
 
 .profile-page .booking-card {
-  background: #f7faff;
-  border: 1px solid #dce3ef;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.85rem;
 }
@@ -214,12 +214,12 @@
 }
 
 .profile-page .booking-dates {
-  color: #5f6b82;
+  color: var(--muted);
   font-size: 0.86rem;
 }
 
 .profile-page .booking-details {
-  color: #4f5d75;
+  color: var(--muted-strong);
   font-size: 0.86rem;
 }
 

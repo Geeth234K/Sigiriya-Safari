@@ -1,9 +1,9 @@
 .featured-activity-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 20px 38px rgba(12, 24, 38, 0.1);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
   display: flex;
   flex-direction: column;
 }
@@ -76,13 +76,13 @@
 
 .featured-activity-card-body h3 {
   margin: 0;
-  color: #18243a;
+  color: var(--text-strong);
   font-size: 1.25rem;
 }
 
 .featured-activity-card-body p {
   margin: 0;
-  color: #5a667f;
+  color: var(--muted-strong);
   line-height: 1.6;
 }
 

@@ -35,29 +35,35 @@ function StatCard({ stat }) {
   const count = useCountUp(stat.value);
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/40 backdrop-blur transition duration-300 hover:-translate-y-1">
+    <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1">
       <div className="flex items-center gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/20 text-emerald-100">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--eyebrow-border)] bg-[var(--primary-soft)] text-[var(--primary)]">
           <Icon className="text-xl" />
         </div>
         <div>
-          <p className="text-3xl font-semibold text-white">
+          <p className="text-3xl font-semibold text-[var(--text)]">
             {count.toLocaleString()}
             {stat.suffix}
           </p>
-          <p className="text-sm text-emerald-100/70">{stat.label}</p>
+          <p className="text-sm text-[var(--muted)]">{stat.label}</p>
         </div>
       </div>
-      <p className="mt-4 text-sm leading-relaxed text-emerald-100/70">{stat.description}</p>
+      <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">{stat.description}</p>
     </div>
   );
 }
 
 export default function StatsSection({ data }) {
   return (
-    <section className="relative bg-[#050b08] py-20 text-white">
+    <section className="relative bg-[var(--surface)] py-20 text-[var(--text)]">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow={data.eyebrow} title={data.title} description={data.description} />
+        <SectionHeading
+          eyebrow={data.eyebrow}
+          title={data.title}
+          description={data.description}
+          tone="light"
+        />
+        <div className="mt-4 h-1 w-20 rounded-full bg-emerald-400" />
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {data.items.map((stat) => (
             <StatCard key={stat.label} stat={stat} />

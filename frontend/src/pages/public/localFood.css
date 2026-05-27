@@ -1,9 +1,7 @@
 .local-food-page {
-  background:
-    radial-gradient(circle at top, rgba(20, 110, 75, 0.32), transparent 60%),
-    #0b1510;
+  background: var(--bg-soft);
   min-height: 70vh;
-  color: #e6f7f0;
+  color: var(--text);
 }
 
 .local-food-container {
@@ -80,7 +78,7 @@
 
 .local-food-summary {
   font-size: 1.1rem;
-  color: #e3f4ee;
+  color: var(--muted);
   margin: 0;
   line-height: 1.7;
 }
@@ -95,11 +93,11 @@
 }
 
 .local-food-status {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1rem 1.2rem;
   border-radius: 12px;
-  border: 1px solid #e0e6f0;
-  color: #2c3a52;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
 .local-food-status.error {
@@ -117,12 +115,12 @@
 .local-food-section-heading h2 {
   margin: 0 0 0.35rem;
   font-size: clamp(1.4rem, 2.6vw, 1.8rem);
-  color: #f3fef9;
+  color: var(--text);
 }
 
 .local-food-section-heading p {
   margin: 0;
-  color: #bcd8cd;
+  color: var(--muted);
 }
 
 .meal-grid {
@@ -132,11 +130,11 @@
 }
 
 .meal-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 16px;
   padding: 1.1rem;
-  border: 1px solid #e4e9f4;
-  box-shadow: 0 16px 30px rgba(20, 34, 63, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -176,19 +174,19 @@
 }
 
 .meal-price {
-  color: #1f3556;
+  color: var(--text-strong);
   font-weight: 600;
 }
 
 .meal-card h3 {
   margin: 0;
-  color: #18243a;
+  color: var(--text-strong);
   font-size: 1.2rem;
 }
 
 .meal-card p {
   margin: 0;
-  color: #55607a;
+  color: var(--muted-strong);
   line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -278,7 +276,7 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  color: #d6eadf;
+  color: var(--muted);
 }
 
 .local-food-checklist svg {

@@ -1,7 +1,7 @@
 .jeep-safari-page {
-  background: #f6f7fb;
+  background: var(--bg-soft);
   min-height: 70vh;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .jeep-safari-container {
@@ -71,19 +71,19 @@
 }
 
 .jeep-safari-section {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 18px;
   padding: 1.6rem 1.8rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .jeep-safari-status {
-  background: #ffffff;
+  background: var(--surface);
   padding: 1rem 1.2rem;
   border-radius: 12px;
-  border: 1px solid #e0e6f0;
-  color: #2c3a52;
+  border: 1px solid var(--border);
+  color: var(--text);
   text-align: center;
   margin: 2rem 0;
 }
@@ -101,13 +101,13 @@
 }
 
 .jeep-safari-stat {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 16px;
   padding: 1rem 1.1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   text-align: center;
-  color: #1f2937;
-  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  box-shadow: var(--shadow);
   display: grid;
   gap: 0.25rem;
   justify-items: center;
@@ -115,13 +115,13 @@
 
 .jeep-safari-stat-icon {
   font-size: 1.5rem;
-  color: #6b7280;
+  color: var(--muted);
 }
 
 .jeep-safari-stat-label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -129,7 +129,7 @@
 .jeep-safari-stat-value {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-strong);
 }
 
 .jeep-safari-stat-value.price {
@@ -138,13 +138,13 @@
 
 .jeep-safari-section-heading h2 {
   margin: 0 0 0.35rem;
-  color: #18243a;
+  color: var(--text-strong);
   font-size: clamp(1.4rem, 2.6vw, 1.8rem);
 }
 
 .jeep-safari-section-heading p {
   margin: 0 0 1.2rem;
-  color: #5d697f;
+  color: var(--muted);
 }
 
 .jeep-safari-wildlife {
@@ -178,9 +178,9 @@
 }
 
 .jeep-safari-wildlife-card {
-  background: #f8fafc;
+  background: var(--surface-soft);
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   padding: 0.6rem;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@
 }
 
 .jeep-safari-wildlife-carousel::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--border-strong);
   border-radius: 999px;
 }
 
@@ -225,7 +225,7 @@
 .jeep-safari-wildlife-name {
   text-align: center;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .jeep-safari-checklist {
@@ -240,7 +240,7 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  color: #3c4a63;
+  color: var(--muted-strong);
 }
 
 .jeep-safari-checklist svg {
@@ -254,14 +254,14 @@
 }
 
 .jeep-safari-bring-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   padding: 0.85rem 1.1rem;
   text-align: left;
   font-weight: 600;
-  color: #1f2937;
-  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -278,19 +278,19 @@
 }
 
 .jeep-safari-price-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 18px;
   padding: 1.5rem 1.7rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .jeep-safari-price-label {
-  color: #6b7280;
+  color: var(--muted);
   font-weight: 600;
 }
 
@@ -302,7 +302,7 @@
 }
 
 .jeep-safari-price-original {
-  color: #9aa5b5;
+  color: var(--muted);
   text-decoration: line-through;
   font-weight: 600;
   font-size: 1.1rem;
@@ -324,20 +324,20 @@
 }
 
 .jeep-safari-price-subtext {
-  color: #6b7280;
+  color: var(--muted);
   font-weight: 500;
 }
 
 .jeep-safari-book-button {
   width: 100%;
-  background: #ffffff;
-  color: #111827;
-  border: 1px solid #e2e8f0;
+  background: var(--surface);
+  color: var(--text-strong);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 0.9rem 1.4rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
+  box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   display: flex;
   align-items: center;
@@ -347,8 +347,8 @@
 
 .jeep-safari-book-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 28px rgba(15, 23, 42, 0.16);
-  border-color: #cbd5e1;
+  box-shadow: var(--shadow-strong);
+  border-color: var(--border-strong);
 }
 
 @media (max-width: 720px) {

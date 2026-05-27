@@ -73,16 +73,16 @@
 .plan-form {
   display: grid;
   gap: 1.1rem;
-  background: #ffffff;
+  background: var(--surface);
   padding: clamp(1.25rem, 2.5vw, 1.8rem);
   border-radius: 16px;
-  border: 1px solid #dce3ef;
-  box-shadow: 0 12px 26px rgba(15, 35, 66, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .plan-form h2 {
   margin: 0;
-  color: #17212f;
+  color: var(--text);
   font-size: 1.35rem;
 }
 
@@ -100,18 +100,18 @@
 
 .form-group label {
   font-weight: 600;
-  color: #293751;
+  color: var(--text-strong);
   font-size: 0.92rem;
 }
 
 .form-group input,
 .form-group select {
   padding: 0.65rem 0.75rem;
-  border: 1px solid #ccd7ea;
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
   font-size: 0.95rem;
   font-family: inherit;
-  background: #f9fbff;
+  background: var(--input-bg);
 }
 
 .form-group input:focus,
@@ -134,19 +134,19 @@
   cursor: pointer;
   padding: 0.6rem;
   border-radius: 8px;
-  border: 1px solid #dce3ef;
-  background: #fcfdff;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
   transition: all 0.2s ease;
 }
 
 .interest-checkbox:hover {
   border-color: #0d6d45;
-  background: #f7faff;
+  background: var(--surface-muted);
 }
 
 .interest-checkbox.active {
   border-color: #0d6d45;
-  background: #eff8f3;
+  background: var(--primary-soft);
 }
 
 .interest-checkbox input[type="checkbox"] {
@@ -157,7 +157,7 @@
 
 .interest-note {
   margin: 0.4rem 0 0;
-  color: #4f5f79;
+  color: var(--muted-strong);
   font-size: 0.86rem;
   line-height: 1.45;
 }

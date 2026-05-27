@@ -1,9 +1,9 @@
 .jeep-safari-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 20px 40px rgba(12, 24, 38, 0.12);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-strong);
   display: flex;
   flex-direction: column;
 }
@@ -88,13 +88,13 @@
 
 .jeep-safari-card-body h3 {
   margin: 0;
-  color: #18243a;
+  color: var(--text-strong);
   font-size: 1.3rem;
 }
 
 .jeep-safari-card-body p {
   margin: 0;
-  color: #5a667f;
+  color: var(--muted-strong);
   line-height: 1.6;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .jeep-safari-card-per {
-  color: #6b768d;
+  color: var(--muted);
   font-size: 0.85rem;
   font-weight: 600;
 }
