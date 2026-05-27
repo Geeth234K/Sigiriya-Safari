@@ -12,6 +12,13 @@
 
 .activity-detail-page--village {
   background:
+    radial-gradient(circle at top, rgba(13, 109, 69, 0.12), transparent 60%),
+    var(--bg-soft);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .activity-detail-page--village {
+  background:
     radial-gradient(circle at top, rgba(20, 110, 75, 0.32), transparent 60%),
     #0b1510;
   color: #e6f7f0;
@@ -162,7 +169,7 @@
   padding: 2.5rem 0;
 }
 
-.activity-detail-page--village .activity-hero-overlay {
+:root[data-theme="dark"] .activity-detail-page--village .activity-hero-overlay {
   background: linear-gradient(120deg, rgba(15, 40, 30, 0.45), rgba(15, 40, 30, 0.12));
 }
 
@@ -200,7 +207,7 @@
   margin: 0 0 0.8rem;
 }
 
-.activity-detail-page--village .activity-summary {
+:root[data-theme="dark"] .activity-detail-page--village .activity-summary {
   color: #e3f4ee;
 }
 
@@ -214,7 +221,7 @@
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
 }
 
-.activity-detail-page--village .activity-section-heading h2 {
+:root[data-theme="dark"] .activity-detail-page--village .activity-section-heading h2 {
   color: #f3fef9;
 }
 
@@ -223,7 +230,7 @@
   color: var(--muted);
 }
 
-.activity-detail-page--village .activity-section-heading p {
+:root[data-theme="dark"] .activity-detail-page--village .activity-section-heading p {
   color: #bcd8cd;
 }
 
@@ -241,8 +248,8 @@
   box-shadow: var(--shadow);
 }
 
-.activity-detail-page--village .included-card,
-.activity-detail-page--village .package-card {
+:root[data-theme="dark"] .activity-detail-page--village .included-card,
+:root[data-theme="dark"] .activity-detail-page--village .package-card {
   background: rgba(16, 44, 34, 0.55);
   border: 1px solid rgba(148, 186, 170, 0.3);
 }
@@ -280,13 +287,13 @@
   line-height: 1.6;
 }
 
-.activity-detail-page--village .included-card-body h3,
-.activity-detail-page--village .package-card strong {
+:root[data-theme="dark"] .activity-detail-page--village .included-card-body h3,
+:root[data-theme="dark"] .activity-detail-page--village .package-card strong {
   color: #eaf6f0;
 }
 
-.activity-detail-page--village .included-card-body p,
-.activity-detail-page--village .package-card span {
+:root[data-theme="dark"] .activity-detail-page--village .included-card-body p,
+:root[data-theme="dark"] .activity-detail-page--village .package-card span {
   color: #c6ddd2;
 }
 
@@ -337,7 +344,7 @@
   font-weight: 600;
 }
 
-.activity-detail-page--village .activity-back-link {
+:root[data-theme="dark"] .activity-detail-page--village .activity-back-link {
   color: #e6f7f0;
 }
 
@@ -383,7 +390,7 @@
   margin: 0;
 }
 
-.activity-detail-page--village .activity-detail-description {
+:root[data-theme="dark"] .activity-detail-page--village .activity-detail-description {
   color: #c9e2d7;
 }
 
