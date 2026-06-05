@@ -181,6 +181,202 @@
   padding: 0.85rem;
 }
 
+.profile-page .bookings-panel .bookings-header h2 {
+  font-size: 1.4rem;
+  color: var(--text-strong);
+  margin: 0 0 0.35rem;
+}
+
+.profile-page .bookings-panel .bookings-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.profile-page .bookings-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.profile-page .summary-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.profile-page .summary-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: 1px solid var(--border);
+}
+
+.profile-page .summary-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.profile-page .summary-card h3 {
+  margin: 0.45rem 0 0;
+  font-size: 1.4rem;
+  color: var(--text-strong);
+}
+
+.profile-page .booking-message {
+  margin-bottom: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+}
+
+.profile-page .booking-message.success {
+  background: #e8f7ee;
+  color: #0f5d3a;
+  border-color: #bde5cc;
+}
+
+.profile-page .booking-message.error {
+  background: #fbe3e3;
+  color: #933535;
+  border-color: #f1b9b9;
+}
+
+.profile-page .bookings-list.modern {
+  gap: 1rem;
+}
+
+.profile-page .booking-card.modern {
+  background: var(--surface-muted);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.profile-page .booking-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.profile-page .booking-ref {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.profile-page .booking-card h3 {
+  margin: 0.4rem 0 0.45rem;
+  font-size: 1.05rem;
+  color: var(--text-strong);
+}
+
+.profile-page .booking-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.profile-page .status-pill {
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.profile-page .status-pill.pending {
+  background: #fff4d8;
+  color: #8f6a16;
+}
+
+.profile-page .status-pill.confirmed {
+  background: #dff6ea;
+  color: #0f5d3a;
+}
+
+.profile-page .status-pill.completed {
+  background: #e2ecff;
+  color: #1d4ed8;
+}
+
+.profile-page .status-pill.cancelled {
+  background: #fbe3e3;
+  color: #933535;
+}
+
+.profile-page .booking-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.profile-page .booking-total span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.profile-page .booking-total strong {
+  font-size: 1.05rem;
+  color: #16a34a;
+}
+
+.profile-page .booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.profile-page .action-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.profile-page .action-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.profile-page .action-btn.cancel {
+  border-color: #f1b9b9;
+  color: #933535;
+}
+
+.profile-page .action-btn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .profile-page .booking-header {
   display: flex;
   justify-content: space-between;
@@ -244,6 +440,11 @@
 
 @media (max-width: 768px) {
   .profile-page .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-page .booking-card-top {
     flex-direction: column;
     align-items: flex-start;
   }
